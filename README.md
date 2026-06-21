@@ -60,12 +60,12 @@ wardrobe-ecommerce/
 
 `ash
 # 用户端
-cd frontend/user
+# 在项目根目录
 npm install
 npm run serve    # 访问 http://localhost:7070
 
 # 管理端（另开一个终端）
-cd frontend/admin
+cd admin
 npm install
 npm run serve    # 访问 http://localhost:7071
 `

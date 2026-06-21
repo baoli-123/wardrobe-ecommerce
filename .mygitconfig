@@ -1,0 +1,5 @@
+﻿[safe]
+	directory = *
+[http]
+	sslBackend = openssl
+	sslVerify = false
