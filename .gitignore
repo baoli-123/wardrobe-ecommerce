@@ -1,0 +1,22 @@
+﻿# Dependencies
+**/node_modules/
+
+# Build output
+**/dist/
+backend/target/
+
+# IDE
+.idea/
+*.iml
+**/.smarttomcat/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files
+.env.local
+.env.*.local
+
+# Logs
+*.log

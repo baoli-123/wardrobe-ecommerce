@@ -1,0 +1,112 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>LoginOrRegServlet</servlet-name>
+    <servlet-class>com.itheima.controller.LoginOrRegServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginOrRegServlet</servlet-name>
+    <url-pattern>/register</url-pattern>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ClothesServlet</servlet-name>
+    <servlet-class>com.itheima.controller.ClothesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClothesServlet</servlet-name>
+    <url-pattern>/allClothes</url-pattern>
+    <url-pattern>/allStyles</url-pattern>
+    <url-pattern>/allTypes</url-pattern>
+    <url-pattern>/clothesByName</url-pattern>
+    <url-pattern>/clothDetails</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ManageClothesServlet</servlet-name>
+    <servlet-class>com.itheima.controller.ManageClothesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManageClothesServlet</servlet-name>
+    <url-pattern>/getAllClothesData</url-pattern>
+    <url-pattern>/addClothes</url-pattern>
+    <url-pattern>/editClothes</url-pattern>
+    <url-pattern>/delClothes</url-pattern>
+    <url-pattern>/searchClothes</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ManageUserServlet</servlet-name>
+    <servlet-class>com.itheima.controller.ManageUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManageUserServlet</servlet-name>
+    <url-pattern>/getAllUser</url-pattern>
+    <url-pattern>/delUser</url-pattern>
+    <url-pattern>/searchUser</url-pattern>
+    <url-pattern>/editUser</url-pattern>
+    <url-pattern>/addUser</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ManageOrderServlet</servlet-name>
+    <servlet-class>com.itheima.controller.ManageOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ManageOrderServlet</servlet-name>
+    <url-pattern>/allOrderData</url-pattern>
+    <url-pattern>/searchOrder</url-pattern>
+    <url-pattern>/deliveryOrder</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>CartServlet</servlet-name>
+    <servlet-class>com.itheima.controller.CartServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CartServlet</servlet-name>
+    <url-pattern>/addToCart</url-pattern>
+    <url-pattern>/getCartDataByUser</url-pattern>
+    <url-pattern>/updateCartData</url-pattern>
+    <url-pattern>/delCartData</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>OrderServlet</servlet-name>
+    <servlet-class>com.itheima.controller.OrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderServlet</servlet-name>
+    <url-pattern>/addOrder</url-pattern>
+    <url-pattern>/getOrderByUser</url-pattern>
+    <url-pattern>/payOrder</url-pattern>
+    <url-pattern>/delOrderData</url-pattern>
+    <url-pattern>/receiveOrder</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>com.itheima.controller.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/getCurrentUser</url-pattern>
+    <url-pattern>/updateUser</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UploadFileServlet</servlet-name>
+    <servlet-class>com.itheima.controller.UploadFileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadFileServlet</servlet-name>
+    <url-pattern>/uploadFile</url-pattern>
+  </servlet-mapping>
+
+</web-app>
