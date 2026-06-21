@@ -24,3 +24,6 @@ Thumbs.db
 # Temp config.gitconfig.mygitconfig
 
 # Temp config.gitconfig.mygitconfig
+# Temp config
+.gitconfig
+.mygitconfig
