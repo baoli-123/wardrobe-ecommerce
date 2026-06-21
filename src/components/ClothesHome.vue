@@ -52,7 +52,7 @@ const clothesName = ref('')
 
 const router = useRouter()
 const route = useRoute()
-const url = "/wardrobe_back/images/"
+const url = "/images/"
 //获取所有服装数据
 const fetchClothings = () => {
   axios.get('/wardrobe_back/allClothes',{
@@ -64,7 +64,17 @@ const fetchClothings = () => {
     clothings.value = res.data
     console.log(clothings.value)
   }).catch(error => {
-    alert(error.message)
+    // 演示模式：使用模拟数据
+    clothings.value = [
+      {id:1, clothName:'时尚连衣裙', style:'休闲', price:299, image:'lyq.jpg'},
+      {id:2, clothName:'商务衬衫', style:'商务', price:199, image:'cs.png'},
+      {id:3, clothName:'休闲T恤', style:'休闲', price:129, image:'px.jpg'},
+      {id:4, clothName:'优雅套装', style:'正式', price:599, image:'zym.png'},
+      {id:5, clothName:'经典西装', style:'商务', price:899, image:'tx.png'},
+      {id:6, clothName:'印花上衣', style:'休闲', price:169, image:'mj.png'},
+      {id:7, clothName:'简约风衣', style:'休闲', price:459, image:'bqm.png'},
+      {id:8, clothName:'晚礼服', style:'正式', price:1299, image:'20240723140210_ydx.jpg'},
+    ]
   })
 }
 onMounted(() => {

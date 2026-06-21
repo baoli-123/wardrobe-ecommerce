@@ -42,7 +42,7 @@ import {useRoute} from "vue-router";
 import axios from "../axios";
 const route = useRoute()
 //图片路径
-const url = "/wardrobe_back/images/"
+const url = "/images/"
 //添加购物车时需要选择的尺码参数
 let clothing = ref({})
 const selectedSize = ref('');
@@ -57,7 +57,18 @@ const getClothesInfo = () =>{
   }).then(res => {
     clothing.value = res.data
   }).catch(error =>{
-    console.log(error)
+    // 演示模式：使用模拟数据
+    const mockData = [
+      {id:1, clothName:'时尚连衣裙', style:'休闲', typeName:'女装', price:299, image:'lyq.jpg', sizeList:[{id:1,sizeName:'S'},{id:2,sizeName:'M'},{id:3,sizeName:'L'}]},
+      {id:2, clothName:'商务衬衫', style:'商务', typeName:'男装', price:199, image:'cs.png', sizeList:[{id:1,sizeName:'M'},{id:2,sizeName:'L'},{id:3,sizeName:'XL'}]},
+      {id:3, clothName:'休闲T恤', style:'休闲', typeName:'男装', price:129, image:'px.jpg', sizeList:[{id:1,sizeName:'S'},{id:2,sizeName:'M'},{id:3,sizeName:'L'}]},
+      {id:4, clothName:'优雅套装', style:'正式', typeName:'女装', price:599, image:'zym.png', sizeList:[{id:1,sizeName:'M'},{id:2,sizeName:'L'}]},
+      {id:5, clothName:'经典西装', style:'商务', typeName:'男装', price:899, image:'tx.png', sizeList:[{id:1,sizeName:'L'},{id:2,sizeName:'XL'},{id:3,sizeName:'XXL'}]},
+      {id:6, clothName:'印花上衣', style:'休闲', typeName:'女装', price:169, image:'mj.png', sizeList:[{id:1,sizeName:'S'},{id:2,sizeName:'M'}]},
+      {id:7, clothName:'简约风衣', style:'休闲', typeName:'女装', price:459, image:'bqm.png', sizeList:[{id:1,sizeName:'M'},{id:2,sizeName:'L'}]},
+      {id:8, clothName:'晚礼服', style:'正式', typeName:'女装', price:1299, image:'20240723140210_ydx.jpg', sizeList:[{id:1,sizeName:'S'},{id:2,sizeName:'M'}]},
+    ]
+    clothing.value = mockData.find(c => c.id === Number(route.query.clothId)) || mockData[0]
   })
 }
 
