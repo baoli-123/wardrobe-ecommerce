@@ -2,7 +2,7 @@
 
 > 一个基于 Vue 3 的前后端分离电商平台，覆盖商品展示、购物车、下单及管理端数据看板等电商核心流程。
 
-→ [在线预览](https://wardrobe-ecommerce-iota.vercel.app/)
+→ [在线预览](https://wardrobe-ecommerce-rho.vercel.app/)
 
 ---
 
